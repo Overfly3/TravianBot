@@ -12,21 +12,31 @@ using OpenQA.Selenium.Chrome;
 
 namespace TravianBot
 {
-    public partial class Form1 : Form
+    public partial class BrowserSelectionDialog : Form
     {
-        public Form1()
+        public BrowserSelectionDialog()
         {
             InitializeComponent();
+            /** example code
             IWebDriver driver = new ChromeDriver("C:\\Program Files (x86)\\Google\\Chrome\\Application");
             driver.Navigate().GoToUrl("http://www.google.ch");
-            //driver.FindElement(By.Name("q")).SendKeys("Let's destroy this shit");
             IWebElement query = driver.FindElement(By.Name("q"));
-            query.SendKeys("fdsdfs");
+            query.SendKeys("fdsdfs"); **/
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void uiButtonForConfirm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uiButtonForCancel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
