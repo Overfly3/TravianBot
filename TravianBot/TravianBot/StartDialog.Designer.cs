@@ -1,6 +1,6 @@
 ﻿namespace TravianBot
 {
-    partial class BrowserSelectionDialog
+    partial class StartDialog
     {
         /// <summary>
         /// Required designer variable.

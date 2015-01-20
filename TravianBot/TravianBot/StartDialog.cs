@@ -12,9 +12,9 @@ using OpenQA.Selenium.Chrome;
 
 namespace TravianBot
 {
-    public partial class BrowserSelectionDialog : Form
+    public partial class StartDialog : Form
     {
-        public BrowserSelectionDialog()
+        public StartDialog()
         {
             InitializeComponent();
             /** example code

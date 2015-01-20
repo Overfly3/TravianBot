@@ -50,16 +50,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BrowserSelectionDialog.cs">
+    <Compile Include="entities\Ressources.cs" />
+    <Compile Include="entities\User.cs" />
+    <Compile Include="entities\Village.cs" />
+    <Compile Include="StartDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BrowserSelectionDialog.Designer.cs">
-      <DependentUpon>BrowserSelectionDialog.cs</DependentUpon>
+    <Compile Include="StartDialog.Designer.cs">
+      <DependentUpon>StartDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BrowserSelectionDialog.resx">
-      <DependentUpon>BrowserSelectionDialog.cs</DependentUpon>
+    <EmbeddedResource Include="StartDialog.resx">
+      <DependentUpon>StartDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
