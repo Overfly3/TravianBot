@@ -7,34 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WatiN.Core;
-using WatiN.Core.Interfaces;
-using WatiN.Core.Logging;
-using WatiN.Core.DialogHandlers;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace TravianBot
 {
-    public partial class Form1 : System.Windows.Forms.Form
+    public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
-
-            test();
+            IWebDriver driver = new ChromeDriver("C:\\Program Files (x86)\\Google\\Chrome\\Application");
+            driver.Navigate().GoToUrl("http://www.google.ch");
+            //driver.FindElement(By.Name("q")).SendKeys("Let's destroy this shit");
+            IWebElement query = driver.FindElement(By.Name("q"));
+            query.SendKeys("fdsdfs");
         }
 
-        private void test()
+        private void Form1_Load(object sender, EventArgs e)
         {
-            SearchForWatiNOnGoogle();
-        }
 
-        public void SearchForWatiNOnGoogle()
-        {
-            using (var browser = new IE("http://www.google.com"))
-            {
-                browser.TextField(Find.ByName("q")).TypeText("WatiN");
-                browser.Button(Find.ByName("btnG")).Click();
-            }
-        } 
+        }
     }
 }
