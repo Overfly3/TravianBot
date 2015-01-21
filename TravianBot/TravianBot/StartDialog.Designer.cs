@@ -32,6 +32,10 @@
             this.uiLabelForSelectBrowser = new System.Windows.Forms.Label();
             this.uiButtonForConfirm = new System.Windows.Forms.Button();
             this.uiButtonForCancel = new System.Windows.Forms.Button();
+            this.uiLabelForUsername = new System.Windows.Forms.Label();
+            this.uiLabelForPassword = new System.Windows.Forms.Label();
+            this.uiTextBoxForUsername = new System.Windows.Forms.TextBox();
+            this.uiTextBoxForPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // uiComboBoxForSelectBrowser
@@ -74,16 +78,52 @@
             this.uiButtonForCancel.UseVisualStyleBackColor = true;
             this.uiButtonForCancel.Click += new System.EventHandler(this.uiButtonForCancel_Click);
             // 
-            // BrowserSelection
+            // uiLabelForUsername
+            // 
+            this.uiLabelForUsername.AutoSize = true;
+            this.uiLabelForUsername.Location = new System.Drawing.Point(12, 46);
+            this.uiLabelForUsername.Name = "uiLabelForUsername";
+            this.uiLabelForUsername.Size = new System.Drawing.Size(55, 13);
+            this.uiLabelForUsername.TabIndex = 4;
+            this.uiLabelForUsername.Text = "Username";
+            // 
+            // uiLabelForPassword
+            // 
+            this.uiLabelForPassword.AutoSize = true;
+            this.uiLabelForPassword.Location = new System.Drawing.Point(12, 83);
+            this.uiLabelForPassword.Name = "uiLabelForPassword";
+            this.uiLabelForPassword.Size = new System.Drawing.Size(53, 13);
+            this.uiLabelForPassword.TabIndex = 5;
+            this.uiLabelForPassword.Text = "Password";
+            // 
+            // uiTextBoxForUsername
+            // 
+            this.uiTextBoxForUsername.Location = new System.Drawing.Point(257, 46);
+            this.uiTextBoxForUsername.Name = "uiTextBoxForUsername";
+            this.uiTextBoxForUsername.Size = new System.Drawing.Size(181, 20);
+            this.uiTextBoxForUsername.TabIndex = 6;
+            // 
+            // uiTextBoxForPassword
+            // 
+            this.uiTextBoxForPassword.Location = new System.Drawing.Point(257, 83);
+            this.uiTextBoxForPassword.Name = "uiTextBoxForPassword";
+            this.uiTextBoxForPassword.Size = new System.Drawing.Size(181, 20);
+            this.uiTextBoxForPassword.TabIndex = 7;
+            // 
+            // StartDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(451, 154);
+            this.Controls.Add(this.uiTextBoxForPassword);
+            this.Controls.Add(this.uiTextBoxForUsername);
+            this.Controls.Add(this.uiLabelForPassword);
+            this.Controls.Add(this.uiLabelForUsername);
             this.Controls.Add(this.uiButtonForCancel);
             this.Controls.Add(this.uiButtonForConfirm);
             this.Controls.Add(this.uiLabelForSelectBrowser);
             this.Controls.Add(this.uiComboBoxForSelectBrowser);
-            this.Name = "BrowserSelection";
+            this.Name = "StartDialog";
             this.Text = "TravianBot";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -97,6 +137,10 @@
         private System.Windows.Forms.Label uiLabelForSelectBrowser;
         private System.Windows.Forms.Button uiButtonForConfirm;
         private System.Windows.Forms.Button uiButtonForCancel;
+        private System.Windows.Forms.Label uiLabelForUsername;
+        private System.Windows.Forms.Label uiLabelForPassword;
+        private System.Windows.Forms.TextBox uiTextBoxForUsername;
+        private System.Windows.Forms.TextBox uiTextBoxForPassword;
     }
 }
 
