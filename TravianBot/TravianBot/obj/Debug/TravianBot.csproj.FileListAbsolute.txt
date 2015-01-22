@@ -11,3 +11,16 @@ C:\Users\Alex\Documents\GitHub\TravianBot\TravianBot\TravianBot\bin\Debug\WebDri
 C:\Users\Alex\Documents\GitHub\TravianBot\TravianBot\TravianBot\obj\Debug\TravianBot.exe
 C:\Users\Alex\Documents\GitHub\TravianBot\TravianBot\TravianBot\obj\Debug\TravianBot.pdb
 C:\Users\Alex\Documents\GitHub\TravianBot\TravianBot\TravianBot\obj\Debug\TravianBot.StartDialog.resources
+C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\obj\Debug\TravianBot.StartDialog.resources
+C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\obj\Debug\TravianBot.Properties.Resources.resources
+C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\obj\Debug\TravianBot.csproj.GenerateResource.Cache
+C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\bin\Debug\TravianBot.exe.config
+C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\bin\Debug\TravianBot.exe
+C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\bin\Debug\TravianBot.pdb
+C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\bin\Debug\WebDriver.dll
+C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\bin\Debug\WebDriver.Support.dll
+C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\bin\Debug\WebDriver.xml
+C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\bin\Debug\WebDriver.Support.xml
+C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\obj\Debug\TravianBot.csprojResolveAssemblyReference.cache
+C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\obj\Debug\TravianBot.exe
+C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\obj\Debug\TravianBot.pdb

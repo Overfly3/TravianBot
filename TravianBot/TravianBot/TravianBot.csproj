@@ -50,7 +50,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="entities\Driver.cs" />
+    <Compile Include="entities\BrowserEnum.cs" />
     <Compile Include="entities\Ressources.cs" />
+    <Compile Include="entities\TravianHelper.cs" />
     <Compile Include="entities\User.cs" />
     <Compile Include="entities\Village.cs" />
     <Compile Include="StartDialog.cs">
