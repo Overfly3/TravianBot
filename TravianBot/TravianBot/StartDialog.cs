@@ -81,6 +81,7 @@ namespace TravianBot
 
                     if (logInSuccessfull)
                     {
+                        helper.GetRessources();
                         MainDialog mainDialog = new MainDialog();
                         mainDialog.Show();
                     }

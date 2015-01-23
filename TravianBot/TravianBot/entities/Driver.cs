@@ -13,15 +13,15 @@ namespace TravianBot
 {
     class Driver
     {
-        public IWebDriver myDriver;
+        public IWebDriver WebDriver;
         public Driver(BrowserEnum.Browser driver)
         {
-            this.myDriver = getDriver(driver);
+            this.WebDriver = getDriver(driver);
         }
 
         public Driver(IWebDriver driver)
         {
-            this.myDriver = driver;
+            this.WebDriver = driver;
         }
         
         private IWebDriver getDriver(BrowserEnum.Browser driver)

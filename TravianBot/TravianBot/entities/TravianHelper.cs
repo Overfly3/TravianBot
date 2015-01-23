@@ -20,20 +20,26 @@ namespace TravianBot.entities
             this.Driver = driver;
         }
 
+        public Ressources GetRessources()
+        {
+            Village village = new Village(Driver.WebDriver);
+            return village.Ressources;
+        }
+
         public bool loginTravian()
         {
             String old_url;
             String new_url;
 
-            Driver.myDriver.Navigate().GoToUrl("http://ts2.travian.de/");
+            Driver.WebDriver.Navigate().GoToUrl("http://ts2.travian.de/");
 
-            Driver.myDriver.FindElement(By.Name("name")).SendKeys(myUserName.Trim());
-            Driver.myDriver.FindElement(By.Name("password")).SendKeys(myPassword.Trim());
+            Driver.WebDriver.FindElement(By.Name("name")).SendKeys(myUserName.Trim());
+            Driver.WebDriver.FindElement(By.Name("password")).SendKeys(myPassword.Trim());
 
-            old_url = Driver.myDriver.Url;
-            Driver.myDriver.FindElement(By.Name("s1")).Click();
+            old_url = Driver.WebDriver.Url;
+            Driver.WebDriver.FindElement(By.Name("s1")).Click();
 
-            new_url = Driver.myDriver.Url;
+            new_url = Driver.WebDriver.Url;
 
             return (old_url != new_url) ? true : false;
         }
