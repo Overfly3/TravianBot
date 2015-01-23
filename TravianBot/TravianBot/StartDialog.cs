@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using TravianBot.entities;
+using TravianBot.dialogs;
 
 namespace TravianBot
 {
@@ -20,13 +22,39 @@ namespace TravianBot
         public StartDialog()
         {
             InitializeComponent();
-            uiComboBoxForSelectBrowser.SelectedIndex = 1; //default firefox
-            //uiComboBoxForSelectBrowser.SelectedIndex = 1;
-            /** example code
-            IWebDriver driver = new ChromeDriver("C:\\Program Files (x86)\\Google\\Chrome\\Application");
-            driver.Navigate().GoToUrl("http://www.google.ch");
-            IWebElement query = driver.FindElement(By.Name("q"));
-            query.SendKeys("fdsdfs"); **/
+            setUi();
+        }
+
+        private void setUi()
+        {
+            addConfigsToDialog();
+        }
+
+        private void addConfigsToDialog()
+        {
+            //instance the config
+            Configuration config = ConfigurationManager.OpenExeConfiguration(Application.ExecutablePath);
+
+            //get settings settings
+            if (config.AppSettings.Settings["username"] != null)
+            {
+                uiTextBoxForUsername.Text = config.AppSettings.Settings["username"].Value;
+            }
+            if (config.AppSettings.Settings["password"] != null)
+            {
+                uiTextBoxForPassword.Text = config.AppSettings.Settings["password"].Value;
+            }
+            if (config.AppSettings.Settings["browser"] != null)
+            {
+                uiComboBoxForSelectBrowser.SelectedIndex = int.Parse(config.AppSettings.Settings["browser"].Value);
+            }
+            else
+            {
+                uiComboBoxForSelectBrowser.SelectedIndex = 1;
+            }
+            config.AppSettings.Settings.Add("username", uiTextBoxForUsername.Text);
+            config.AppSettings.Settings.Add("password", uiTextBoxForPassword.Text);
+            config.AppSettings.Settings.Add("browser", uiComboBoxForSelectBrowser.SelectedIndex.ToString());
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -36,6 +64,7 @@ namespace TravianBot
 
         private void uiButtonForConfirm_Click(object sender, EventArgs e)
         {
+            saveSettingsToAppConfig();
             if(uiTextBoxForUsername.Text.Trim().Length != 0 && uiTextBoxForPassword.Text.Trim().Length != 0)
             {
                 if (uiComboBoxForSelectBrowser.SelectedItem == null)
@@ -45,16 +74,15 @@ namespace TravianBot
                 else
                 {
                     //login
-                    //Driver driver = new Driver(BrowserEnum.getEnum(uiComboBoxForSelectBrowser.SelectedIndex));
-                    IWebDriver ffdriver = new FirefoxDriver();
-                    Driver driver = new Driver(ffdriver);
+                    Driver driver = new Driver(BrowserEnum.getEnum(uiComboBoxForSelectBrowser.SelectedIndex));
                     TravianHelper helper = new TravianHelper(driver, uiTextBoxForUsername.Text, uiTextBoxForPassword.Text);
                     
                     bool logInSuccessfull = helper.loginTravian();
 
                     if (logInSuccessfull)
                     {
-                        //open main frame
+                        MainDialog mainDialog = new MainDialog();
+                        mainDialog.Show();
                     }
                     else
                     {
@@ -68,6 +96,41 @@ namespace TravianBot
             {
                 MessageBox.Show("Please eneter username and password to continue.");
             }
+        }
+
+        private void saveSettingsToAppConfig()
+        {
+            //instance the config
+            Configuration config = ConfigurationManager.OpenExeConfiguration(Application.ExecutablePath);
+
+            //add settings
+            if (config.AppSettings.Settings["username"] != null)
+            {
+                config.AppSettings.Settings["username"].Value = uiTextBoxForUsername.Text;
+            }
+            else
+            {
+                config.AppSettings.Settings.Add("username", uiTextBoxForUsername.Text);
+            }
+            if (config.AppSettings.Settings["password"] != null)
+            {
+                config.AppSettings.Settings["password"].Value = uiTextBoxForPassword.Text;
+            }
+            else
+            {
+                config.AppSettings.Settings.Add("password", uiTextBoxForPassword.Text);
+            }
+            if (config.AppSettings.Settings["browser"] != null)
+            {
+                config.AppSettings.Settings["browser"].Value = uiComboBoxForSelectBrowser.SelectedIndex.ToString();
+            }
+            else
+            {
+                config.AppSettings.Settings.Add("browser", uiComboBoxForSelectBrowser.SelectedIndex.ToString());
+            }
+
+            //save settings
+            config.Save(ConfigurationSaveMode.Minimal);
         }
 
         private void uiButtonForCancel_Click(object sender, EventArgs e)

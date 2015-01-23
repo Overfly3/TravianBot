@@ -16,8 +16,7 @@ namespace TravianBot
         public IWebDriver myDriver;
         public Driver(BrowserEnum.Browser driver)
         {
-            //this.myDriver = getDriver(driver);
-            this.myDriver = new FirefoxDriver();
+            this.myDriver = getDriver(driver);
         }
 
         public Driver(IWebDriver driver)
@@ -32,7 +31,7 @@ namespace TravianBot
                 case BrowserEnum.Browser.Firefox:
                     return new FirefoxDriver();
                 case BrowserEnum.Browser.GoogleChrome:
-                    return new ChromeDriver();
+                    return new ChromeDriver("C:\\Program Files (x86)\\Google\\Chrome\\Application");
                 case BrowserEnum.Browser.InternetExplorer:
                     return new InternetExplorerDriver();
             }

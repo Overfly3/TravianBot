@@ -10,11 +10,13 @@ namespace TravianBot.entities
     class TravianHelper
     {
         private Driver Driver;
-        private String username;
-        private String password;
+        private String myUserName;
+        private String myPassword;
         private TravianBot.Driver driver;
         public TravianHelper(Driver driver, String username, String password)
         {
+            myUserName = username;
+            myPassword = password;
             this.Driver = driver;
         }
 
@@ -25,8 +27,8 @@ namespace TravianBot.entities
 
             Driver.myDriver.Navigate().GoToUrl("http://ts2.travian.de/");
 
-            Driver.myDriver.FindElement(By.Name("name")).SendKeys(username.Trim());
-            Driver.myDriver.FindElement(By.Name("password")).SendKeys(password.Trim());
+            Driver.myDriver.FindElement(By.Name("name")).SendKeys(myUserName.Trim());
+            Driver.myDriver.FindElement(By.Name("password")).SendKeys(myPassword.Trim());
 
             old_url = Driver.myDriver.Url;
             Driver.myDriver.FindElement(By.Name("s1")).Click();

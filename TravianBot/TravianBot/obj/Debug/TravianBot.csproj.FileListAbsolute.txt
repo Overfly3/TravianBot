@@ -24,3 +24,4 @@ C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\bin\Debug\
 C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\obj\Debug\TravianBot.csprojResolveAssemblyReference.cache
 C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\obj\Debug\TravianBot.exe
 C:\Users\luca.tirabassi\Source\Repos\TravianBot\TravianBot\TravianBot\obj\Debug\TravianBot.pdb
+C:\Users\Alex\Documents\GitHub\TravianBot\TravianBot\TravianBot\obj\Debug\TravianBot.dialogs.MainDialog.resources
