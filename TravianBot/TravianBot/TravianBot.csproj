@@ -57,6 +57,7 @@
     <Compile Include="dialogs\MainDialog.Designer.cs">
       <DependentUpon>MainDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="entities\Buildings.cs" />
     <Compile Include="entities\Driver.cs" />
     <Compile Include="entities\BrowserEnum.cs" />
     <Compile Include="entities\Ressources.cs" />

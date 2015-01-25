@@ -21,5 +21,12 @@ namespace TravianBot.entities
                 return new Ressources(myDriver);
             }
         }
+        public Buildings Buildings
+        {
+            get
+            {
+                return new Buildings(myDriver);
+            }
+        }
     }
 }

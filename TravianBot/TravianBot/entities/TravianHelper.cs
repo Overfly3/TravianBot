@@ -26,6 +26,12 @@ namespace TravianBot.entities
             return village.Ressources;
         }
 
+        public Buildings GetBuildings()
+         {
+            Village village = new Village(Driver.WebDriver);
+            return village.Buildings;
+        }
+
         public bool loginTravian()
         {
             String old_url;
@@ -40,6 +46,7 @@ namespace TravianBot.entities
             Driver.WebDriver.FindElement(By.Name("s1")).Click();
 
             new_url = Driver.WebDriver.Url;
+            Driver.WebDriver.Navigate().GoToUrl("http://ts2.travian.de/dorf2.php");
 
             return (old_url != new_url) ? true : false;
         }

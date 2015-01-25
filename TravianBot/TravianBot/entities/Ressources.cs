@@ -43,19 +43,19 @@ namespace TravianBot.entities
         }
         private int getCereals()
         {
-            return int.Parse(myDriver.FindElement(By.Id("l4")).Text);
+            return int.Parse(myDriver.FindElement(By.Id("l4")).Text.Replace(".", string.Empty));
         }
         private int getWood()
         {
-            return int.Parse(myDriver.FindElement(By.Id("l1")).Text);
+            return int.Parse(myDriver.FindElement(By.Id("l1")).Text.Replace(".", string.Empty));
         }
         private int getIron()
         {
-            return int.Parse(myDriver.FindElement(By.Id("l3")).Text);
+            return int.Parse(myDriver.FindElement(By.Id("l3")).Text.Replace(".",string.Empty));
         }
         private int getClay()
         {
-            return int.Parse(myDriver.FindElement(By.Id("l2")).Text);
+            return int.Parse(myDriver.FindElement(By.Id("l2")).Text.Replace(".", string.Empty));
         }
     }
 }
