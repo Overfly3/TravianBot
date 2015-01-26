@@ -21,12 +21,22 @@ namespace TravianBot.entities
                 return new Ressources(myDriver);
             }
         }
-        public Buildings Buildings
+        public List<Building> Buildings
         {
             get
             {
-                return new Buildings(myDriver);
+                return getBuildings();
             }
+        }
+
+        private List<Building> getBuildings()
+        {
+            List<Building> buildings = new List<Building>();
+            foreach (IWebElement element in myDriver.FindElements(By.TagName("area")))
+            {
+                buildings.Add(new Building(element, myDriver));
+            }
+            return buildings;
         }
     }
 }

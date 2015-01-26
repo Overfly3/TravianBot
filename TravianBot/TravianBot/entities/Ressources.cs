@@ -6,7 +6,7 @@ using System.Text;
 
 namespace TravianBot.entities
 {
-    class Ressources
+    public class Ressources
     {
         IWebDriver myDriver;
         public Ressources(IWebDriver driver)

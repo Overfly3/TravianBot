@@ -82,7 +82,7 @@ namespace TravianBot
                     if (logInSuccessfull)
                     {
                         //helper.GetRessources();
-                        helper.GetBuildings();
+                        Village village = new Village(driver.WebDriver);
                         MainDialog mainDialog = new MainDialog();
                         mainDialog.Show();
                     }
@@ -90,9 +90,7 @@ namespace TravianBot
                     {
                         MessageBox.Show("Login not successfull.\nPlease check if your data is correct.");
                     }
-
                 }
-               
             }
             else
             {

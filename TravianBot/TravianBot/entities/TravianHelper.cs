@@ -26,12 +26,6 @@ namespace TravianBot.entities
             return village.Ressources;
         }
 
-        public Buildings GetBuildings()
-         {
-            Village village = new Village(Driver.WebDriver);
-            return village.Buildings;
-        }
-
         public bool loginTravian()
         {
             String old_url;
