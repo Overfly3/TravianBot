@@ -25,7 +25,7 @@ namespace TravianBot.entities
             }
         }
 
-        public BuildingType Type
+        public BuildingTypeEnum Type
         {
             get
             {
@@ -59,7 +59,7 @@ namespace TravianBot.entities
             throw new NotImplementedException();
         }
 
-        private BuildingType getType()
+        private BuildingTypeEnum getType()
         {
             throw new NotImplementedException();
         }
