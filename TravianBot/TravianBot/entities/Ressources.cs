@@ -41,6 +41,15 @@ namespace TravianBot.entities
                 return getCereals();
             }
         }
+
+        public int FreeCereals
+        {
+            get
+            {
+                return getFreeCereals();
+            }
+        }
+
         private int getCereals()
         {
             return int.Parse(myDriver.FindElement(By.Id("l4")).Text.Replace(".", string.Empty));
@@ -56,6 +65,10 @@ namespace TravianBot.entities
         private int getClay()
         {
             return int.Parse(myDriver.FindElement(By.Id("l2")).Text.Replace(".", string.Empty));
+        }
+        private int getFreeCereals()
+        {
+            return int.Parse(myDriver.FindElement(By.Id("l5")).Text.Replace(".", string.Empty));
         }
     }
 }

@@ -1,0 +1,97 @@
+ ------------------------------------------------------------
+|public enum BuildingCategory								 |
+|    {														 |
+|        Infrastructure = 1, Military = 2, Ressources = 3	 |
+|    }														 |
+ ------------------------------------------------------------
+
+
+
+[Infrastructure] = 1  <-- This is the BuildingCategory
+---------------------
+	ID: 17
+	Name: Marktplatz
+---------------------
+	ID: 10
+	Name: Rohstofflager
+---------------------
+	ID: 11
+	Name: Kornspeicher
+---------------------
+	ID: 15
+	Name: Hauptgebäude
+---------------------
+	ID: 16
+	Name: Versammlungsplatz
+---------------------
+	ID: 18
+	Name: Botschaft
+---------------------
+	ID: 23
+	Name: Versteck
+---------------------
+	ID: 24
+	Name: Rathaus
+---------------------
+	ID: 25
+	Name: Residenz
+---------------------
+	ID: 26
+	Name: Palast
+---------------------
+	ID: 27
+	Name: Schatzkammer
+---------------------
+	ID: 28
+	Name: Handelskontor
+---------------------
+	ID: 34
+	Name: Steinmetz
+---------------------	
+
+
+[Military] = 2
+---------------------
+	ID: 13
+	Name: Schmiede
+---------------------
+	ID: 14
+	Name: Turnierplatz
+---------------------
+	ID: 19
+	Name: Kaserne
+---------------------
+	ID: 20
+	Name: Stall
+---------------------
+	ID: 21
+	Name: Wekstatt
+---------------------
+	ID: 22
+	Name: Akademie
+---------------------
+	ID: 36
+	Name: Fallensteller
+---------------------
+	ID: 37
+	Name: Heldenhof
+---------------------
+
+
+[Ressources] = 3
+---------------------
+	ID: 5
+	Name: Sägewerk
+---------------------
+	ID: 6
+	Name: Lehmbrennerei
+---------------------
+	ID: 7
+	Name: Eisengiesserei
+---------------------
+	ID: 8
+	Name: Getreidemühle
+---------------------
+	ID: 9
+	Name: Bäckerei
+---------------------

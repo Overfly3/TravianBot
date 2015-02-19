@@ -58,10 +58,12 @@
       <DependentUpon>MainDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="entities\Building.cs" />
-    <Compile Include="entities\BuildingType.cs" />
+    <Compile Include="entities\BuildingTypeEnum.cs" />
     <Compile Include="entities\Driver.cs" />
     <Compile Include="entities\BrowserEnum.cs" />
+    <Compile Include="entities\Ressource.cs" />
     <Compile Include="entities\Ressources.cs" />
+    <Compile Include="entities\RessourcesEnum.cs" />
     <Compile Include="entities\TravianHelper.cs" />
     <Compile Include="entities\User.cs" />
     <Compile Include="entities\Village.cs" />
@@ -103,6 +105,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="source\buildings\buildinglist.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

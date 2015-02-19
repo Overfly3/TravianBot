@@ -25,7 +25,7 @@ namespace TravianBot.entities
             }
         }
 
-        public BuildingType Type
+        public BuildingTypeEnum Type
         {
             get
             {
@@ -60,7 +60,7 @@ namespace TravianBot.entities
             throw new NotImplementedException();
         }
 
-        private BuildingType getType()
+        private BuildingTypeEnum getType()
         {
             /**<area alt=" shape="poly" coords="280,113,301,98,301,99,329,100,349,114,348,169,327,181,298,181,278,168" href="build.php?id=26">
              * 
